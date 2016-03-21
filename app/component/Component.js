@@ -27,7 +27,7 @@ export default class Component extends React.Component {
 
     setAreaLabel = () => {
         this.setState({url: this.state.input});
-        rest(this.state.input).then((response)=>{responseEntity: response.entity});
+        rest(this.state.input).then((response)=>{this.setState({responseEntity: response.entity})});
 
     }
 
@@ -36,20 +36,11 @@ export default class Component extends React.Component {
         return (
             <div id="inner-div">
                 <form>
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td><Input type="text" value={this.state.input} label=" URL " placeholder="Enter URL"
-                                       onChange={this.handleChange} /></td>
-                            <td id="button"><ButtonInput type="button" id="subBtn" bsSize="small" value="go" bsStyle="info"
+                    <Input type="text" value={this.state.input} label=" URL " placeholder="Enter URL"
+                                       onChange={this.handleChange} />
+                            <ButtonInput type="button" id="subBtn" bsSize="small" value="go" bsStyle="info"
                                        onClick={this.setAreaLabel}      />
-                            </td>
 
-                        </tr>
-
-                        </tbody>
-
-                    </table>
                     <Input id="urlArea" type="textarea" label={this.state.url} value={this.state.responseEntity}/>
                 </form>
             </div>

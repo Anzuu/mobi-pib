@@ -27,7 +27,7 @@ export default class Login extends React.Component {
                 <form className="form-horizontal">
                     <Input type="text" bsSize="small" value={this.state.username} label="Benutzername"/>
                     <Input type="password" bsSize="small" value={this.state.password} label="Passwort"/>
-                     <ButtonInput pullRight onCLick={this.checkInput} type="submit" value="einloggen" bsSize="small"/>
+                     <ButtonInput onCLick={this.checkInput} type="submit" value="einloggen" bsSize="small"/>
 
                 </form>
                 <FA name="spinner" spin/>

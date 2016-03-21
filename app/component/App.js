@@ -8,5 +8,5 @@ import Login from './Login';
 import Menu from './Menu'
 
 export default ()=> {
-  return <Menu />;
+  return <Menu/>;
 };
